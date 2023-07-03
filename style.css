@@ -17,40 +17,44 @@ body {
     margin: 0;
     display: flex;
     width: 100vw;
-    height: 100vh; /* Changed 100vw to 100vh */
+    height: 100vh;
     justify-content: center;
     align-items: center;
     background-color: var(--hue-neutral);
 }
 
 body.correct {
-    --hue: var(--hue-correct); /* Added missing -- before hue-correct */
+    --hue: var(--hue-correct);
 }
 
 body.wrong {
-    --hue: var(--hue-wrong); /* Added missing -- before hue-wrong */
+    --hue: var(--hue-wrong);
 }
 
 .container {
-    width: 800px;
+    width: 600px; /* Adjust the width as desired */
     max-width: 80%;
     background-color: whitesmoke;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px; /* Increased padding for more space inside the container */
     box-shadow: 0 0 10px 2px;
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .btn-grid {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     gap: 9px;
     margin: 20px 0;
 }
 
 .btn {
-    --hue: var(--hue-neutral); /* Added missing -- before hue-neutral */
-    border: 1px solid var(--hue); /* Added missing -- before hue */
-    background-color: aqua;
+    --hue: var(--hue-neutral);
+    border: 1px solid var(--hue);
+    padding: 15px 30px; /* Adjust the padding to increase button size */
+    font-size: 16px; /* Adjust the font size as desired */
+    width: 200px; /* Adjust the width as desired */
+    height: 50px;
 }
 
 #Start-btn {
@@ -59,14 +63,22 @@ body.wrong {
 
 .btn:hover {
     border-color: #dd0fdd;
+    background-color: aqua;
+    color: white;
 }
 
 .btn.correct.btn {
-    --hue: var(--hue-correct); /* Added missing -- before hue-correct */
+    --hue: var(--hue-correct);
 }
 
-.btn.wrong.btn {
-    --hue: var(--hue-wrong); /* Added missing -- before hue-wrong */
+.btn.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.btn.wrong:hover {
+    border-color: var(--hue-wrong);
+    background-color: var(--hue-wrong);
+    color: white;
 }
 
 .start-btn,
