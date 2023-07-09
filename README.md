@@ -39,5 +39,9 @@ Tested the application thoroughly and made necessary improvements.
 Credits
 This project was made possible with the help of the following resources:
 
-Resource 1
-Resource 2
+Youtube
+w3school
+
+## Image 
+
+![Alt text](<Assets/Screenshot 2023-07-09 194128.png>)
