@@ -7,6 +7,8 @@ var timerValueElement = document.getElementById("timer-value");
 var timeLeft = 60; // Total time in seconds
 var score = 0;
 var timerInterval;
+var highScoreInitials = localStorage.getItem("highScoreInitials");
+var highScore = localStorage.getItem("highScore");
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -126,6 +128,18 @@ function endGame() {
             localStorage.setItem("highScore", highScore);
             localStorage.setItem("highScoreInitials", initials);
         }
+    }
+
+    // Display the high score if available
+    var highScoreInitials = localStorage.getItem("highScoreInitials");
+    var highScore = localStorage.getItem("highScore");
+    if (highScoreInitials && highScore) {
+        document.getElementById("high-score").textContent =
+            "High Score: " +
+            highScore.toFixed(2) +
+            " (" +
+            highScoreInitials +
+            ")";
     }
 }
 
